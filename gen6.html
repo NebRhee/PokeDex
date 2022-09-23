@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet"></link>
+    <title>Pokedex</title>
+</head>
+<body>
+
+    
+    <div class="outermost-container">
+        <div class="sidebar">
+            <div class="side-header"></div>
+            <a href="index.html"><button class="side-button">Gen 1</button></a>
+            <a href="gen2.html"><button class="side-button">Gen 2</button></a>
+            <a href="gen3.html"><button class="side-button">Gen 3</button></a>
+            <a href="gen4.html"><button class="side-button">Gen 4</button></a>
+            <a href="gen5.html"><button class="side-button">Gen 5</button></a>
+            <a href="gen6.html"><button class="side-button">Gen 6</button></a>
+            <a href="gen7.html"><button class="side-button">Gen 7</button></a>
+            <a href="gen8.html"><button class="side-button">Gen 8</button></a>
+        </div>
+        <div class="content-container">
+            <header>
+                <h1>PokeDex</h1>
+            </header>
+            <div class="search-container">
+                <input type="search" id="search" data-search placeholder="Search Here...">
+            </div>
+            <!-- Contain Pokemon Cards and Pokemon Modals -->
+            <div class="pokemon-container" data-pokemon-card-container></div>
+            <div class="modal-container" data-pokemon-modal-container></div>
+            <div id="overlay"></div>
+        </div>
+        <!-- Pokemon Card Template -->
+        <template data-pokemon-card>
+            <button class="btn pokemon-card">
+                <div class="img-container">
+                    <img data-pokemon-image>
+                </div>
+                <div class="info">
+                    <span class="number" data-pokemon-number></span>
+                    <h3 class="name" data-pokemon-name></h3>
+                    <small class="type">Type: <span data-pokemon-type></span>
+                    </small>
+                </div>
+            </button>
+        </template>
+        <!-- Pokemon Modal Template -->
+        <template data-pokemon-modal>
+            <div class="modal">
+                <div class="img-container">
+                    <img data-modal-image>
+                </div>
+                <!-- Pokemon Number -->
+                <h2 class="number" data-modal-number></h2>
+                <div class="name" data-modal-name></div>
+                <button class="btn modal-btn">&times;</button>
+                <div class="info">
+                    <div class="height">Height: </div>
+                    <div class="height" data-modal-height></div>
+                    <div class="weight">Weight: </div>
+                    <div class="weight" data-modal-weight></div>
+                </div>
+                
+                <div class="type" data-modal-type>
+                    <div class="type-prompt">Type</div>
+                    <div class="type-one" data-modal-type-one></div>
+                    <div class="type-two" data-modal-type-two></div>
+                </div>
+                <div class="description" data-modal-description></div>
+
+            </div>
+        </template>
+    </div>
+</body>
+<script src="/js/gen6.js"></script>
+</html>
