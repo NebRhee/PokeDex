@@ -170,7 +170,15 @@ function changeCardColor(card, type) {
 
 // Get Pokemon Description
 function getDescription(pokemon_species) {
-    const description = pokemon_species.flavor_text_entries[6].flavor_text//.replace(/(\r\n|\n|\r)/gm, "")
+    let description = pokemon_species.flavor_text_entries[6].flavor_text//.replace(/(\r\n|\n|\r)/gm, "")
+    if (pokemon_species.flavor_text_entries[6].language.name != "en") {
+        pokemon_species.flavor_text_entries.forEach(element => {
+            if (element.language.name == "en") {
+                description = element.flavor_text
+            }
+        })
+    }
+
     return description
 }
 

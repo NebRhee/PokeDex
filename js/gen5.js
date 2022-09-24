@@ -170,7 +170,7 @@ function changeCardColor(card, type) {
 
 // Get Pokemon Description
 function getDescription(pokemon_species) {
-    const description = pokemon_species.flavor_text_entries[3].flavor_text//.replace(/(\r\n|\n|\r)/gm, "")
+    let description = pokemon_species.flavor_text_entries[5].flavor_text//.replace(/(\r\n|\n|\r)/gm, "")
     return description
 }
 
