@@ -89,7 +89,7 @@ function createPokemonCard(pokemon) {
     const type = card.querySelector("[data-pokemon-type]")
 
     // Store API Data into their respective divs
-    image.src = `https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`
+    image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     number.textContent = `#${pokemon.id.toString().padStart(3, 0)}`
     name.textContent = pokemon.name[0].toUpperCase() + pokemon.name.slice(1).split('-')[0]
 

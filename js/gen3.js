@@ -122,7 +122,7 @@ function createPokemonModal(pokemon, pokemon_species) {
     const description = modal.querySelector("[data-modal-description]")
 
     // Store API data into their respective divs
-    image.src = `https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`
+    image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     number.textContent = `#${pokemon.id.toString().padStart(3, 0)}`
     name.textContent = pokemon.name[0].toUpperCase() + pokemon.name.slice(1).split('-')[0]
 
